@@ -5,6 +5,7 @@ Acest repository contine implementarea experimentala si documentatia aferenta pr
 ---
 
 ## 1. Obiectivul Cercetarii
+
 Proiectul investigheaza conservarea evolutiva a circuitului fronto-striatal (in special **nucleul caudat**) in timpul sarcinilor de **anticipare a recompensei**. Prin proiectarea matricilor de covarianta spatiala pe varietatea matricilor simetrice si pozitiv definite (SPD) si alinierea acestora la un punct de referinta comun ($I$), se elimina variabilitatea anatomica specifica fiecarei specii (domain shift).
 
 ### Ipoteze de Lucru
@@ -17,12 +18,13 @@ Proiectul investigheaza conservarea evolutiva a circuitului fronto-striatal (in 
 
 ```text
 cross-species-bci-riemannian/
-├── data/                       # Seturi de date preprocesate (ignorate in Git)
-├── docs/                       # Documentatia cercetarii si raportul final (.docx)
+├── data/                          # Seturi de date preprocesate si matrici SPD (ignorate in Git)
+├── docs/                          # Documentatia cercetarii si raportul final (.docx)
 │   └── Idee_Proiect_Cercetare.docx
-├── results/                    # Grafice, matrici de confuzie si tabele cu metrici
-├── src/                        # Codul sursa al pipeline-ului experimental
-│   └── 01_preprocessing_roi.py # Filtrare spectrala si extragere ROI (Nucleul Caudat)
+├── results/                       # Grafice, matrici de confuzie si tabele cu metrici
+├── src/                           # Codul sursa al pipeline-ului experimental
+│   ├── 01_preprocessing_roi.py    # Filtrare spectrala si extragere ROI (Nucleul Caudat)
+│   └── 02_riemannian_alignment.py # Matricile de covarianta SPD si Alinierea Euclidiana in I
 ├── .gitignore
 ├── README.md
 └── requirements.txt
