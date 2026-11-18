@@ -54,7 +54,7 @@ def generate_calibrated_species_data(species="human", n_trials=60, n_total_chann
 if __name__ == "__main__":
     os.makedirs("../data", exist_ok=True)
 
-    print("=== [ZIUA 1] RULARE PREPROCESARE & EXTRAGERE ROI ===")
+    print("  RULARE PREPROCESARE EXTRAGERE ROI")
 
     X_human, y_human, idx_human = generate_calibrated_species_data(species="human", n_trials=80, seed=42)
     print(f"[OM] Canale ROI: {idx_human} -> Dimensiune date: {X_human.shape}")
